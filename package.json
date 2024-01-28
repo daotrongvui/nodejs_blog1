@@ -25,13 +25,22 @@
     "url": "https://github.com/daotrongvui/nodejs_blog1/issues"
   },
   "homepage": "https://github.com/daotrongvui/nodejs_blog1#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "pre-commit": "lint-staged"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0"
   },
   "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "morgan": "^1.10.0",
     "node-sass": "^9.0.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5"
   }
 }
